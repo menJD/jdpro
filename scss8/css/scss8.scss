@@ -1,0 +1,161 @@
+@import 'reset.css';
+@mixin whb($w,$h,$b){
+    width: $w;
+    height: $h;
+    background: $b;
+}
+@mixin box($to){
+    display: -webkit-box;
+    -webkit-box-orient: $to;
+}
+@mixin f($f){
+    float: $f;
+}
+@mixin font($name,$val1,$val2,$val3){
+    .#{$name}-24{font-size: $val1;}
+    .#{$name}-16{font-size: $val2;}
+    .#{$name}-20{font-size: $val3;}
+}         
+html,body,.boss{
+    @include whb(100%,100%,null);
+}
+html{
+    font-size: 62.5%;
+}
+@include font(spc,24px,16px,20px);
+.boss{
+    @include box(vertical);
+    header{
+        @include whb(100%,3.5rem,#1b82d2);
+        @include box(horizontal);
+        h1{
+            -webkit-box-flex: 1;
+            font-size: 1.4rem;
+            text-align: center;
+            line-height: 3.5rem;
+            color: white; 
+        }
+        .right{
+            @include whb(1.8rem,auto,null);
+            margin-right: 10px;
+            img{
+                margin-top: 8px;
+                @include whb(1.8rem,auto,null);
+            }
+        }
+    }
+    section{
+        -webkit-box-flex: 1;
+        overflow-y: auto;
+        background:#ebeeef; 
+        &::-webkit-scrollbar{width: 0;};
+        .color{
+            @include whb(100%,1rem,none);
+            visibility: hidden;
+        }  
+        .top{
+            @include whb(100%,auto,white);
+            @include box(horizontal);
+            padding: 10px 10px 0px 10px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #f4f4f4;
+            .top_left{
+                -webkit-box-flex: 1;
+                dl{
+                    dt{
+                        @include f(left); 
+                        img{
+                            @include whb(58px,auto,null);
+                        }
+                    }
+                    dd{
+                        @include f(left);
+                        padding-left: 7px;
+                        h2{
+                            font-size: 13px;
+                            padding: 8px 0;
+                            font-weight: bold;
+                        }
+                        p{
+                            font-size: 10px;
+                            color: #a5a5a5;
+                        }
+                    }
+                }
+            }
+            .top_right{
+                @include whb(3rem,auto,white);
+                line-height: 6rem;
+                img{
+                    &:nth-child(1){
+                       @include whb(1.5rem,auto,null); 
+                    }
+                    &:nth-child(2){
+                       @include whb(0.8rem,auto,null);
+                    }
+                }
+            }
+        }
+        .main1{
+            @include whb(100%,auto,white);
+            padding-left: 10px;
+            margin-top: 10px;
+            border-bottom: 1px solid #f4f4f4;
+            border-top: 1px solid #f4f4f4;
+            ul{
+                li{
+                    line-height: 33px;
+                    font-weight: bold;
+                    font-size: 12px;
+                    border-bottom: 2px solid #f7f7f7;
+                    .img1{
+                        @include whb(1.5rem,auto,null);
+                        vertical-align: middle;
+                        margin-right: 14px;
+                    }
+                    .img2{
+                        @include whb(0.8rem,auto,null);
+                        @include f(right);
+                        margin-right: 10px;
+                        margin-top: 10px;
+                    }
+                }
+                .last{
+                    border: none;
+                }
+            }
+        }
+    }
+    footer{
+        @include whb(100%,4rem,white);
+        border-top: 1px solid gainsboro;
+        @include box(horizontal);
+        dl{
+            -webkit-box-flex: 1;
+            text-align: center;
+            color: #999999;
+            img{
+                @include whb(2rem,auto,null);
+                padding-top: 4px;
+            }
+            &:nth-child(2){
+                dd{
+                    padding-top: 1px;
+                }
+            }
+            &:nth-child(3){
+                dd{
+                    padding-top: 2px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:320px) and (max-width:414px){
+    .boss header h1{
+        font-size: 1.4rem;
+    }
+    .boss section h2{
+        font-size: 1.4rem;
+    }
+}

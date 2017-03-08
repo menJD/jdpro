@@ -1,0 +1,142 @@
+@import url(reset.css);
+html, body, .boss {
+  width: 100%;
+  height: 100%; }
+
+html {
+  font-size: 62.5%; }
+
+.spc-24 {
+  font-size: 24px; }
+
+.spc-16 {
+  font-size: 16px; }
+
+.spc-20 {
+  font-size: 20px; }
+
+.boss {
+  display: -webkit-box;
+  -webkit-box-orient: vertical; }
+  .boss header {
+    width: 100%;
+    height: 3.5rem;
+    background: #1b82d2;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal; }
+    .boss header h1 {
+      -webkit-box-flex: 1;
+      font-size: 1.4rem;
+      text-align: center;
+      line-height: 3.5rem;
+      color: white; }
+    .boss header .right {
+      width: 1.8rem;
+      height: auto;
+      margin-right: 10px; }
+      .boss header .right img {
+        margin-top: 8px;
+        width: 1.8rem;
+        height: auto; }
+  .boss section {
+    -webkit-box-flex: 1;
+    overflow-y: auto;
+    background: #ebeeef; }
+    .boss section::-webkit-scrollbar {
+      width: 0; }
+    .boss section .color {
+      width: 100%;
+      height: 1rem;
+      background: none;
+      visibility: hidden; }
+    .boss section .top {
+      width: 100%;
+      height: auto;
+      background: white;
+      display: -webkit-box;
+      -webkit-box-orient: horizontal;
+      padding: 10px 10px 0px 10px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #f4f4f4; }
+      .boss section .top .top_left {
+        -webkit-box-flex: 1; }
+        .boss section .top .top_left dl dt {
+          float: left; }
+          .boss section .top .top_left dl dt img {
+            width: 58px;
+            height: auto; }
+        .boss section .top .top_left dl dd {
+          float: left;
+          padding-left: 7px; }
+          .boss section .top .top_left dl dd h2 {
+            font-size: 13px;
+            padding: 8px 0;
+            font-weight: bold; }
+          .boss section .top .top_left dl dd p {
+            font-size: 10px;
+            color: #a5a5a5; }
+      .boss section .top .top_right {
+        width: 3rem;
+        height: auto;
+        background: white;
+        line-height: 6rem; }
+        .boss section .top .top_right img:nth-child(1) {
+          width: 1.5rem;
+          height: auto; }
+        .boss section .top .top_right img:nth-child(2) {
+          width: 0.8rem;
+          height: auto; }
+    .boss section .main1 {
+      width: 100%;
+      height: auto;
+      background: white;
+      padding-left: 10px;
+      margin-top: 10px;
+      border-bottom: 1px solid #f4f4f4;
+      border-top: 1px solid #f4f4f4; }
+      .boss section .main1 ul li {
+        line-height: 33px;
+        font-weight: bold;
+        font-size: 12px;
+        border-bottom: 2px solid #f7f7f7; }
+        .boss section .main1 ul li .img1 {
+          width: 1.5rem;
+          height: auto;
+          vertical-align: middle;
+          margin-right: 14px; }
+        .boss section .main1 ul li .img2 {
+          width: 0.8rem;
+          height: auto;
+          float: right;
+          margin-right: 10px;
+          margin-top: 10px; }
+      .boss section .main1 ul .last {
+        border: none; }
+  .boss footer {
+    width: 100%;
+    height: 4rem;
+    background: white;
+    border-top: 1px solid gainsboro;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal; }
+    .boss footer dl {
+      -webkit-box-flex: 1;
+      text-align: center;
+      color: #999999; }
+      .boss footer dl img {
+        width: 2rem;
+        height: auto;
+        padding-top: 4px; }
+      .boss footer dl:nth-child(2) dd {
+        padding-top: 1px; }
+      .boss footer dl:nth-child(3) dd {
+        padding-top: 2px; }
+
+@media screen and (min-width: 320px) and (max-width: 414px) {
+  .boss header h1 {
+    font-size: 1.4rem; }
+
+  .boss section h2 {
+    font-size: 1.4rem; } }
+
+/*# sourceMappingURL=scss8.css.map */
